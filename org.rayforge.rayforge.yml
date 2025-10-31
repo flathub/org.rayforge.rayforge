@@ -191,11 +191,17 @@ modules:
   - name: rayforge
     buildsystem: simple
     build-commands:
-      - pip3 install --prefix=/app --no-deps --no-build-isolation .
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=/app --no-deps --no-build-isolation .
     post-install:
-      - install -Dm644 data/${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
+      - install -Dm644 rayforge/resources/icons/${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
       - install -Dm644 data/${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
+      - echo $(git describe --exact-match --tags) > ${FLATPAK_DEST}/lib/python$(python -c
+        'import sys; print("%s.%s" %sys.version_info[0:2])')/site-packages/rayforge/version.txt
     sources:
       - type: git 
         url: https://github.com/barebaric/rayforge.git
-        commit: f20f5b82164d2bbe059fa3e075d5963034ca8cf8
+        tag: "0.23"
+        x-checker:
+          type: git
+          url: https://github.com/barebaric/rayforge.git
+          tag-pattern: ^([\d\.]+)$
