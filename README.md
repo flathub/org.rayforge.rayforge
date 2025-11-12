@@ -1,5 +1,5 @@
 ### Rayforge Flatpak
-This is Flathub package of [Rayforge](https://github.com/barebaric/rayforge).
+This is the Flathub package of [Rayforge](https://github.com/barebaric/rayforge).
 
 ## Building
 This package can be built locally by running
