@@ -21,7 +21,8 @@ modules:
   - name: python3-scikit-build
     buildsystem: simple
     build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "scikit-build>=0.14.0" --no-build-isolation
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "scikit-build>=0.14.0" --no-build-isolation
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/12/b3/231ffd4ab1fc9d679809f356cebee130ac7daa00d6d6f3206dd4fd137e9e/distro-1.9.0-py3-none-any.whl
@@ -33,23 +34,25 @@ modules:
         url: https://files.pythonhosted.org/packages/c3/a3/21b519f58de90d684056c52ec4e45f744cfda7483f082dcc4dd18cc74a93/scikit_build-0.18.1-py3-none-any.whl
         sha256: a6860e300f6807e76f21854163bdb9db16afc74eadf34bd6a9947d3fdfcd725a
     cleanup:
-      - "*"
+      - '*'
 
   - name: python3-pybind11
     buildsystem: simple
     build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "pybind11>=2.13.2" --no-build-isolation
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "pybind11>=2.13.2" --no-build-isolation
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/13/2f/0f24b288e2ce56f51c920137620b4434a38fd80583dbbe24fc2a1656c388/pybind11-2.13.6-py3-none-any.whl
         sha256: 237c41e29157b962835d356b370ededd57594a26d5894a795960f0047cb5caf5
     cleanup:
-      - "*"
+      - '*'
 
   - name: python3-meson-python
     buildsystem: simple
     build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "meson-python>=0.17.1" --no-build-isolation
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "meson-python>=0.17.1" --no-build-isolation
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/7d/ec/40c0ddd29ef4daa6689a2b9c5ced47d5b58fa54ae149b19e9a97f4979c8c/meson_python-0.17.1-py3-none-any.whl
@@ -61,12 +64,13 @@ modules:
         url: https://files.pythonhosted.org/packages/e8/61/9dd3e68d2b6aa40a5fc678662919be3c3a7bf22cba5a6b4437619b77e156/pyproject_metadata-0.9.0-py3-none-any.whl
         sha256: fc862aab066a2e87734333293b0af5845fe8ac6cb69c451a41551001e923be0b
     cleanup:
-      - "*"
+      - '*'
 
   - name: python3-pythran
     buildsystem: simple
     build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "pythran>=0.14.0" --no-build-isolation
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "pythran>=0.14.0" --no-build-isolation
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/44/e4/6e8731d4d10dd09942a6f5015b2148ae612bf13e49629f33f9fade3c8253/beniget-0.4.2.post1-py3-none-any.whl
@@ -87,7 +91,8 @@ modules:
   - name: python3-pyvips
     buildsystem: simple
     build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "pyvips~=3.0.0" --no-build-isolation
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "pyvips~=3.0.0" --no-build-isolation
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/4c/a2/d8ecd2f7ffa084870ba071a584aac44800a89f3c77b305999be7dc8b7bb3/pyvips-3.0.0.tar.gz
@@ -102,7 +107,8 @@ modules:
       - name: python3-cffi
         buildsystem: simple
         build-commands:
-          - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "cffi~=1.17.1" --no-build-isolation
+          - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+            --prefix=${FLATPAK_DEST} "cffi~=1.17.1" --no-build-isolation
         sources:
           - type: file
             url: https://files.pythonhosted.org/packages/fc/97/c783634659c2920c3fc70419e3af40972dbaf758daa229a7d6ea6135c90d/cffi-1.17.1.tar.gz
@@ -147,7 +153,7 @@ modules:
         url: https://github.com/PyO3/maturin
         tag: v1.9.4
     cleanup:
-      - "*"
+      - '*'
 
   - name: python3-vtracer
     buildsystem: simple
@@ -159,12 +165,13 @@ modules:
     build-commands:
       - cargo fetch --manifest-path ./cmdapp/Cargo.toml --verbose
       - maturin build --release --compatibility linux --manifest-path ./cmdapp/Cargo.toml
-      - pip3 install --verbose --exists-action=i --no-index --find-links=file://${PWD}/target/wheels --prefix=${FLATPAK_DEST} vtracer --no-build-isolation
+      - pip3 install --verbose --exists-action=i --no-index --find-links=file://${PWD}/target/wheels
+        --prefix=${FLATPAK_DEST} vtracer --no-build-isolation
     sources:
       - cargo-sources-vtracer.json
       - type: git
         url: https://github.com/visioncortex/vtracer.git
-        tag: "webapp.2024.5"
+        tag: webapp.2024.5
 
   - name: python3-pyclipper
     buildsystem: simple
@@ -179,29 +186,31 @@ modules:
   - name: python3-expandvars
     buildsystem: simple
     build-commands:
-    - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-      --prefix=${FLATPAK_DEST} "expandvars" --no-build-isolation
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "expandvars" --no-build-isolation
     sources:
-    - type: file
-      url: https://files.pythonhosted.org/packages/29/ff/a2440069461c63b95fa8b5b89e26eb606e57d8a01391ccaae3738f1b845d/expandvars-1.0.0-py3-none-any.whl
-      sha256: ff1690eceb90bbdeefd1e4b15f4d217f22a3e66f776c2cb060635d2dde4a7689
+      - type: file
+        url: https://files.pythonhosted.org/packages/29/ff/a2440069461c63b95fa8b5b89e26eb606e57d8a01391ccaae3738f1b845d/expandvars-1.0.0-py3-none-any.whl
+        sha256: ff1690eceb90bbdeefd1e4b15f4d217f22a3e66f776c2cb060635d2dde4a7689
 
   - shared-modules/glu/glu-9.json
   - python3-requirements.yaml
   - name: rayforge
     buildsystem: simple
     build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=/app --no-deps --no-build-isolation .
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=/app --no-deps --no-build-isolation .
     post-install:
       - install -Dm644 rayforge/resources/icons/${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
       - install -Dm644 data/${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
-      - echo $(git describe --exact-match --tags) > ${FLATPAK_DEST}/lib/python$(python -c
-        'import sys; print("%s.%s" %sys.version_info[0:2])')/site-packages/rayforge/version.txt
+      - echo $(git describe --exact-match --tags) > ${FLATPAK_DEST}/lib/python$(python
+        -c 'import sys; print("%s.%s" %sys.version_info[0:2])')/site-packages/rayforge/version.txt
     sources:
-      - type: git 
+      - type: git
         url: https://github.com/barebaric/rayforge.git
-        tag: 0.24
+        tag: '0.24'
         x-checker-data:
           type: git
           url: https://github.com/barebaric/rayforge.git
           tag-pattern: ^([\d\.]+)$
+        commit: e2419f30cd1dbf19546a87986a7804339a529ce3
