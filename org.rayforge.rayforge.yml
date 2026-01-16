@@ -214,9 +214,6 @@ modules:
           type: git
           url: https://github.com/barebaric/rayforge.git
           tag-pattern: ^([\d\.]+)$
-<<<<<<< Updated upstream
-        commit: 76f61453ee56e9f8e9d57a65f3c577d881dcf2f2
-=======
           release-url-template: https://github.com/barebaric/rayforge/releases/tag/$version
           is-main-source: true
->>>>>>> Stashed changes
+        commit: 76f61453ee56e9f8e9d57a65f3c577d881dcf2f2
