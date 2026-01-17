@@ -202,6 +202,7 @@ modules:
         --prefix=/app --no-deps --no-build-isolation .
     post-install:
       - install -Dm644 rayforge/resources/icons/${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
+      - install -Dm644 org.rayforge.rayforge.metainfo.xml /app/share/metainfo/org.rayforge.rayforge.metainfo.xml
       - install -Dm644 data/${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
       - echo $(git describe --exact-match --tags) > ${FLATPAK_DEST}/lib/python$(python
         -c 'import sys; print("%s.%s" %sys.version_info[0:2])')/site-packages/rayforge/version.txt
@@ -213,4 +214,6 @@ modules:
           type: git
           url: https://github.com/barebaric/rayforge.git
           tag-pattern: ^([\d\.]+)$
+          release-url-template: https://github.com/barebaric/rayforge/releases/tag/$version
+          is-main-source: true
         commit: 76f61453ee56e9f8e9d57a65f3c577d881dcf2f2
