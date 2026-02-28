@@ -126,6 +126,7 @@ modules:
       - -DNO_AFFINITY=ON
       - -DUSE_OPENMP=0
       - -DNO_WARMUP=1
+      - -DNO_AVX512=1
       - -DBUILD_WITHOUT_LAPAK=1
       - -DBUILD_WITHOUT_LAPAKE=1
       - -DDYNAMIC_ARCH=ON
