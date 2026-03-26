@@ -152,7 +152,8 @@ modules:
       - cargo-sources-maturin.json
       - type: git
         url: https://github.com/PyO3/maturin
-        tag: v1.9.4
+        tag: v1.12.6
+        commit: b61a28edb1bd435ed876f22cc5281e6dab082119
     cleanup:
       - '*'
 
@@ -172,7 +173,9 @@ modules:
       - cargo-sources-vtracer.json
       - type: git
         url: https://github.com/visioncortex/vtracer.git
-        tag: webapp.2024.5
+        tag: 0.6.15
+        commit: fd9cdb08e622f237eb05be553a020ddc9e4c47a1
+
 
   - name: python3-pyclipper
     buildsystem: simple
