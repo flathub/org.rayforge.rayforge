@@ -115,11 +115,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "pypdf==6.0.0" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "pypdf==6.10.2" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/2c/83/2cacc506eb322bb31b747bc06ccb82cc9aa03e19ee9c1245e538e49d52be/pypdf-6.0.0-py3-none-any.whl
-        sha256: 56ea60100ce9f11fc3eec4f359da15e9aec3821b036c1f06d2b660d35683abb8
+        url: https://files.pythonhosted.org/packages/0c/d6/1d5c60cc17bbdf37c1552d9c03862fc6d32c5836732a0415b2d637edc2d0/pypdf-6.10.2-py3-none-any.whl
+        sha256: aa53be9826655b51c96741e5d7983ca224d898ac0a77896e64636810517624aa
   - name: python3-pymupdf
     buildsystem: simple
     build-commands:

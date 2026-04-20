@@ -212,9 +212,9 @@ modules:
     sources:
       - type: git
         url: https://github.com/barebaric/rayforge.git
-        tag: 1.5.2
+        tag: 1.6.0-beta1
         x-checker-data:
           type: git
           url: https://github.com/barebaric/rayforge.git
-          tag-pattern: ^([\d\.]+)$
-        commit: 90f117d5005ba2549711afc62f0eaa88121e6562
+          tag-pattern: ^([\d\.]+(-[\w\.]+)?)$
+        commit: 2f73a227714981b66d3b8db54d66bff58fe75ece
