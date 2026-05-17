@@ -176,6 +176,25 @@ modules:
         tag: 0.6.15
         commit: fd9cdb08e622f237eb05be553a020ddc9e4c47a1
 
+  - name: python3-raygeo
+    buildsystem: simple
+    build-options:
+      append-path: /usr/lib/sdk/rust-stable/bin
+      env:
+        CARGO_HOME: /run/build/python3-raygeo/cargo
+        CARGO_NET_OFFLINE: 'true'
+    build-commands:
+      - cargo --offline fetch --manifest-path ./Cargo.toml
+      - maturin build --release --compatibility linux --manifest-path ./Cargo.toml
+      - pip3 install --verbose --exists-action=i --no-index --find-links=file://${PWD}/target/wheels
+        --prefix=${FLATPAK_DEST} raygeo --no-build-isolation
+    sources:
+      - cargo-sources-raygeo.json
+      - type: git
+        url: https://github.com/barebaric/raygeo.git
+        tag: v0.1.7
+        commit: 604d8217725b73e49858486c5c772099a47f0d38
+
 
   - name: python3-pyclipper
     buildsystem: simple
@@ -212,9 +231,9 @@ modules:
     sources:
       - type: git
         url: https://github.com/barebaric/rayforge.git
-        tag: 1.7.7
+        tag: 1.7.8
         x-checker-data:
           type: git
           url: https://github.com/barebaric/rayforge.git
           tag-pattern: ^([\d\.]+(?:-[\w\.]+)?)$
-        commit: acb80b8a486d2bf44724b0f69ea87e1bc1154fb5
+        commit: 11f682cca3d679672ba1d8b75e9b28ac48412c84
