@@ -239,4 +239,13 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/3c/fb/efaa23fa4e45537b827620f04cf8f3cd658b76642205162e072703a5b963/yarl-1.20.1.tar.gz
         sha256: d017a4997ee50c91fd5466cef416231bb82177b93b029906cefc542ce14c35ac
+  - name: python3-trimesh
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "trimesh==4.6.8" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/32/80/c1b40335949fec3ca1ecea7ddb3f4977dfc104d84dc54e9384f7ccc52124/trimesh-4.6.8-py3-none-any.whl
+        sha256: a7b1073c001ff0498e30db8ae4cec9182bd36dd68be19dc6afeda6c0ebd9e54d
 name: python3-requirements
