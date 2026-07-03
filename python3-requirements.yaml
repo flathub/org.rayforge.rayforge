@@ -115,11 +115,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "pypdf==6.10.2" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "pypdf==6.12.1" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/0c/d6/1d5c60cc17bbdf37c1552d9c03862fc6d32c5836732a0415b2d637edc2d0/pypdf-6.10.2-py3-none-any.whl
-        sha256: aa53be9826655b51c96741e5d7983ca224d898ac0a77896e64636810517624aa
+        url: https://files.pythonhosted.org/packages/5e/aa/4d17fe9ff165d1341878c570b14f5b7291106d63411adf640942a7e638aa/pypdf-6.12.1-py3-none-any.whl
+        sha256: 8fa2a2321cf16247ed848bd7c97f193a60c08670d04abed5b0138327e51c43b0
   - name: python3-pymupdf
     buildsystem: simple
     build-commands:
@@ -219,14 +219,14 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "aiohttp==3.12.14" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "aiohttp==3.14.1" --no-build-isolation
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/0f/15/5bf3b99495fb160b63f95972b81750f18f7f4e02ad051373b669d17d44f2/aiohappyeyeballs-2.6.1-py3-none-any.whl
         sha256: f349ba8f4b75cb25c99c5c2d84e997e485204d2902a9597802b0371f09331fb8
       - type: file
-        url: https://files.pythonhosted.org/packages/e6/0b/e39ad954107ebf213a2325038a3e7a506be3d98e1435e1f82086eec4cde2/aiohttp-3.12.14.tar.gz
-        sha256: 6e06e120e34d93100de448fd941522e11dafa78ef1a893c179901b7d66aa29f2
+        url: https://files.pythonhosted.org/packages/82/78/8ea7308cac6934de8c74a14f3d5f65d1c89287426688be79538d0e5c013d/aiohttp-3.14.1.tar.gz
+        sha256: 307f2cff90a764d329e77040603fa032db89c5c24fdad50c4c15334cba744035
       - type: file
         url: https://files.pythonhosted.org/packages/fb/76/641ae371508676492379f16e2fa48f4e2c11741bd63c48be4b12a6b09cba/aiosignal-1.4.0-py3-none-any.whl
         sha256: 053243f8b92b990551949e63930a839ff0cf0b0ebbe0597b0f3fb19e1a0fe82e
