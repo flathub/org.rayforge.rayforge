@@ -69,12 +69,14 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "opencv_python==4.12.0.88" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "opencv_python==4.13.0.92" --no-build-isolation
     sources:
-      - *id001
       - type: file
-        url: https://files.pythonhosted.org/packages/ac/71/25c98e634b6bdeca4727c7f6d6927b056080668c5008ad3c8fc9e7f8f6ec/opencv-python-4.12.0.88.tar.gz
-        sha256: 8b738389cede219405f6f3880b851efa3415ccd674752219377353f017d2994d
+        url: https://files.pythonhosted.org/packages/db/07/90b34a8e2cf9c50fe8ed25cac9011cde0676b4d9d9c973751ac7616223a2/opencv_python-4.13.0.92-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
+        sha256: 402033cddf9d294693094de5ef532339f14ce821da3ad7df7c9f6e8316da32cf
+      - type: file
+        url: https://files.pythonhosted.org/packages/3e/51/82fed528b45173bf629fa44effb76dff8bc9f4eeaee759038362dfa60237/opencv_python-4.13.0.92-cp37-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.whl
+        sha256: 0bc2596e68f972ca452d80f444bc404e08807d021fbba40df26b61b18e01838a
   - name: python3-platformdirs
     buildsystem: simple
     build-commands:
