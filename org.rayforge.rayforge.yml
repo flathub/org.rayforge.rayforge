@@ -177,6 +177,19 @@ modules:
         commit: fd9cdb08e622f237eb05be553a020ddc9e4c47a1
 
 
+  - name: python3-msgpack
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "msgpack==1.2.1" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/79/d3/36a46a8ed992b781acbc05928bd5bee3c810cb0c3563bf81a7b0c04a1a76/msgpack-1.2.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl
+        sha256: 787c9bebb5833e8f6fc8abca3c0597683d8d87f56a8842b6b89c75a5f3176e2d
+      - type: file
+        url: https://files.pythonhosted.org/packages/e3/10/ddf7b06db879e8792d13934ddda09ff20bd2a583fd84c9b59aae9b0e650b/msgpack-1.2.1-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl
+        sha256: f310233ef7fb9c14e201c93639fe5f5260b005f56f0b29048e999c30935596cc
+
   - name: python3-raygeo
     buildsystem: simple
     build-options:
@@ -193,8 +206,8 @@ modules:
       - cargo-sources-raygeo.json
       - type: git
         url: https://github.com/barebaric/raygeo.git
-        tag: v0.13.2
-        commit: 84ea0144dac55f33d922f50671f916e313139dae
+        tag: v1.15.2
+        commit: 3f012978ce5ecb528dfa53829bfa01eee4b9733c
 
 
   - name: python3-pyclipper
@@ -232,9 +245,9 @@ modules:
     sources:
       - type: git
         url: https://github.com/barebaric/rayforge.git
-        tag: 1.8.1
+        tag: 1.8.2
         x-checker-data:
           type: git
           url: https://github.com/barebaric/rayforge.git
           tag-pattern: ^([\d\.]+(?:-[\w\.]+)?)$
-        commit: 23a768011e532d62728c084ba75b4eec1eb74e9e
+        commit: 7e01d26bf2363136eae4a81df102cf482bc0d930
