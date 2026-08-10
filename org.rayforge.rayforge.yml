@@ -92,11 +92,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "pyvips~=3.0.0" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "pyvips~=3.1.1" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/4c/a2/d8ecd2f7ffa084870ba071a584aac44800a89f3c77b305999be7dc8b7bb3/pyvips-3.0.0.tar.gz
-        sha256: 79459975e4a16089b0eaafed26eb1400ae66ebc16d3ff3a7d2241abcf19dc9e8
+        url: https://files.pythonhosted.org/packages/2d/6a/282936de9faac6addf6bc8792c18e006489d0023ffd8856b8643f54d0558/pyvips-3.1.1.tar.gz
+        sha256: 84fe744d023b1084ac2516bb17064cacd41c7f8aabf8e524dd383534941b9301
     modules:
       - name: vips
         buildsystem: meson
@@ -206,8 +206,8 @@ modules:
       - cargo-sources-raygeo.json
       - type: git
         url: https://github.com/barebaric/raygeo.git
-        tag: v1.33.0
-        commit: a1c16a84646f40258a5b88605dfbbfe87b738d2d
+        tag: v1.37.0
+        commit: 37b7c3130056989fde2398cf9b264f9ea9d06cb6
 
 
   - name: python3-pyclipper
