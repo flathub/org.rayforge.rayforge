@@ -235,11 +235,23 @@ modules:
   - name: rayforge
     buildsystem: simple
     build-commands:
+      # The .mo translation files are gitignored upstream and generated at
+      # release time, so they are missing from the git checkout used here.
+      # Compile them so they end up in the installed package.
+      - for po in $(find . -name '*.po' -path '*/LC_MESSAGES/*'); do msgfmt
+        "${po}" -o "${po%.po}.mo"; done
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=/app --no-deps --no-build-isolation .
     post-install:
       - install -Dm644 rayforge/resources/icons/${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
       - install -Dm644 data/${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
+      # Also install the compiled catalogs under share/locale so that
+      # appstreamcli compose (run by flatpak-builder) detects the app's
+      # languages and Flathub marks it as translated. The metainfo already
+      # declares the gettext domain upstream.
+      - for po in rayforge/locale/*/LC_MESSAGES/*.po; do lang=$(basename $(dirname
+        $(dirname "${po}"))); domain=$(basename "${po}" .po); install -Dm644
+        "${po%.po}.mo" /app/share/locale/${lang}/LC_MESSAGES/${domain}.mo; done
       - sed -i '/^    <release version="1.9.0-beta[0-9]"/,/    <\/release>/d'
         ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - echo $(git describe --exact-match --tags) > ${FLATPAK_DEST}/lib/python$(python
