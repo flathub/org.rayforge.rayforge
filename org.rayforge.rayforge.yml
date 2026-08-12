@@ -238,8 +238,8 @@ modules:
       # The .mo translation files are gitignored upstream and generated at
       # release time, so they are missing from the git checkout used here.
       # Compile them so they end up in the installed package.
-      - for po in $(find . -name '*.po' -path '*/LC_MESSAGES/*'); do msgfmt
-        "${po}" -o "${po%.po}.mo"; done
+      - for po in $(find . -name '*.po' -path '*/LC_MESSAGES/*'); do msgfmt "${po}"
+        -o "${po%.po}.mo"; done
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=/app --no-deps --no-build-isolation .
     post-install:
@@ -250,18 +250,17 @@ modules:
       # languages and Flathub marks it as translated. The metainfo already
       # declares the gettext domain upstream.
       - for po in rayforge/locale/*/LC_MESSAGES/*.po; do lang=$(basename $(dirname
-        $(dirname "${po}"))); domain=$(basename "${po}" .po); install -Dm644
-        "${po%.po}.mo" /app/share/locale/${lang}/LC_MESSAGES/${domain}.mo; done
-      - sed -i '/^    <release version="1.9.0-beta[0-9]"/,/    <\/release>/d'
-        ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
+        $(dirname "${po}"))); domain=$(basename "${po}" .po); install -Dm644 "${po%.po}.mo"
+        /app/share/locale/${lang}/LC_MESSAGES/${domain}.mo; done
+      - sed -i '/^    <release version="1.9.0-beta[0-9]"/,/    <\/release>/d' ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - echo $(git describe --exact-match --tags) > ${FLATPAK_DEST}/lib/python$(python
         -c 'import sys; print("%s.%s" %sys.version_info[0:2])')/site-packages/rayforge/version.txt
     sources:
       - type: git
         url: https://github.com/barebaric/rayforge.git
-        tag: 1.9.0
+        tag: 1.9.1
         x-checker-data:
           type: git
           url: https://github.com/barebaric/rayforge.git
           tag-pattern: ^([\d\.]+(?:-[\w\.]+)?)$
-        commit: 40858587663973bb8167f7010dfb78f43025777f
+        commit: c52fcbc16d946808713923d001722f99a2d24d8e
