@@ -206,8 +206,8 @@ modules:
       - cargo-sources-raygeo.json
       - type: git
         url: https://github.com/barebaric/raygeo.git
-        tag: v1.45.1
-        commit: 180996c7aaead5915d1bf4cd8cb21298ba4a9146
+        tag: v1.47.0
+        commit: 88736aa1f26f692b613ac68b53028f740b0d5b0e
 
 
   - name: python3-pyclipper
@@ -252,7 +252,6 @@ modules:
       - for po in rayforge/locale/*/LC_MESSAGES/*.po; do lang=$(basename $(dirname
         $(dirname "${po}"))); domain=$(basename "${po}" .po); install -Dm644 "${po%.po}.mo"
         /app/share/locale/${lang}/LC_MESSAGES/${domain}.mo; done
-      - sed -i '/^    <release version="1.9.0-beta[0-9]"/,/    <\/release>/d' ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - echo $(git describe --exact-match --tags) > ${FLATPAK_DEST}/lib/python$(python
         -c 'import sys; print("%s.%s" %sys.version_info[0:2])')/site-packages/rayforge/version.txt
     sources:
