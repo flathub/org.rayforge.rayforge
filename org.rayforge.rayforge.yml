@@ -206,8 +206,8 @@ modules:
       - cargo-sources-raygeo.json
       - type: git
         url: https://github.com/barebaric/raygeo.git
-        tag: v1.48.0
-        commit: 4e144b661d72fba43549168e19077700b633f99d
+        tag: v1.49.0
+        commit: 6fe0b6907ff4fd4b0c57c3df1b1e138b890263d1
 
 
   - name: python3-pyclipper
