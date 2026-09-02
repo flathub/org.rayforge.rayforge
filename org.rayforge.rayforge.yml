@@ -92,18 +92,18 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "pyvips~=3.1.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "pyvips~=3.2.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/2d/6a/282936de9faac6addf6bc8792c18e006489d0023ffd8856b8643f54d0558/pyvips-3.1.1.tar.gz
-        sha256: 84fe744d023b1084ac2516bb17064cacd41c7f8aabf8e524dd383534941b9301
+        url: https://files.pythonhosted.org/packages/source/p/pyvips/pyvips-3.2.0.tar.gz
+        sha256: 5fa47cdce4e7f450747c118c12fde913e0710850c6015d8ec4f5af490003a347
     modules:
       - name: vips
         buildsystem: meson
         sources:
           - type: archive
-            url: https://github.com/libvips/libvips/releases/download/v8.17.2/vips-8.17.2.tar.xz
-            sha256: 57ea0ec4f30ea04748c9e8eec5415e7c9ac7cafe6822e4788fc110376a1d224a
+            url: https://github.com/libvips/libvips/releases/download/v8.18.6/vips-8.18.6.tar.xz
+            sha256: 3c41e1d5458081bfa4a5bc54e116c46259c75c6760a18027764555632b9dda3e
       - name: python3-cffi
         buildsystem: simple
         build-commands:
@@ -181,14 +181,14 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "msgpack==1.2.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "msgpack==1.2.2" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/79/d3/36a46a8ed992b781acbc05928bd5bee3c810cb0c3563bf81a7b0c04a1a76/msgpack-1.2.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl
-        sha256: 787c9bebb5833e8f6fc8abca3c0597683d8d87f56a8842b6b89c75a5f3176e2d
+        url: https://files.pythonhosted.org/packages/6e/d3/6592e4064619b04f2dd0054c5fa13e37e3d55eb26044483d871fadb2f46b/msgpack-1.2.2-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl
+        sha256: d24b38a825bcca41bb956de50eb98451ef291304a8607fad99e619043d3e79b9
       - type: file
-        url: https://files.pythonhosted.org/packages/e3/10/ddf7b06db879e8792d13934ddda09ff20bd2a583fd84c9b59aae9b0e650b/msgpack-1.2.1-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl
-        sha256: f310233ef7fb9c14e201c93639fe5f5260b005f56f0b29048e999c30935596cc
+        url: https://files.pythonhosted.org/packages/d7/75/35823e4419df8792191b2a17ae3fe71b41d02c162b2c491c94d1a87f0caa/msgpack-1.2.2-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl
+        sha256: 1814f92306ae7862908e9ece7cfd90e0dc87ded3e89b6ae7ffdd1175d6376fdc
 
   - name: python3-raygeo
     buildsystem: simple
@@ -206,8 +206,8 @@ modules:
       - cargo-sources-raygeo.json
       - type: git
         url: https://github.com/barebaric/raygeo.git
-        tag: v1.45.1
-        commit: 180996c7aaead5915d1bf4cd8cb21298ba4a9146
+        tag: v1.49.0
+        commit: 6fe0b6907ff4fd4b0c57c3df1b1e138b890263d1
 
 
   - name: python3-pyclipper
@@ -252,15 +252,14 @@ modules:
       - for po in rayforge/locale/*/LC_MESSAGES/*.po; do lang=$(basename $(dirname
         $(dirname "${po}"))); domain=$(basename "${po}" .po); install -Dm644 "${po%.po}.mo"
         /app/share/locale/${lang}/LC_MESSAGES/${domain}.mo; done
-      - sed -i '/^    <release version="1.9.0-beta[0-9]"/,/    <\/release>/d' ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - echo $(git describe --exact-match --tags) > ${FLATPAK_DEST}/lib/python$(python
         -c 'import sys; print("%s.%s" %sys.version_info[0:2])')/site-packages/rayforge/version.txt
     sources:
       - type: git
         url: https://github.com/barebaric/rayforge.git
-        tag: 1.10.3
+        tag: 1.11.0
         x-checker-data:
           type: git
           url: https://github.com/barebaric/rayforge.git
           tag-pattern: ^([\d\.]+(?:-[\w\.]+)?)$
-        commit: 073485560b7c47ffb441eee94f03de313b9e10bd
+        commit: 9746dcdef5140006168b60e363acdea69359168c
