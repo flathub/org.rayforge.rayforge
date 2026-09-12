@@ -574,14 +574,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/glam/glam-0.33.5.crate",
-        "sha256": "c426daf70099baff33fac0ba85151c42424861c56828cef9ba02dacb78eb6b26",
-        "dest": "cargo/vendor/glam-0.33.5"
+        "url": "https://static.crates.io/crates/glam/glam-0.33.6.crate",
+        "sha256": "21fef0953c54fd3de2f44b743fbf77e044c81a25faee03636dfccc0d35135e23",
+        "dest": "cargo/vendor/glam-0.33.6"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"c426daf70099baff33fac0ba85151c42424861c56828cef9ba02dacb78eb6b26\", \"files\": {}}",
-        "dest": "cargo/vendor/glam-0.33.5",
+        "contents": "{\"package\": \"21fef0953c54fd3de2f44b743fbf77e044c81a25faee03636dfccc0d35135e23\", \"files\": {}}",
+        "dest": "cargo/vendor/glam-0.33.6",
         "dest-filename": ".cargo-checksum.json"
     },
     {
