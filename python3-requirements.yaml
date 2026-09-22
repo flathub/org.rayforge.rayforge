@@ -82,11 +82,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "platformdirs==4.11.8" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "platformdirs==4.11.12" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/f4/e1/5b7b8bbb55084d1425bcb9bc823ff519e1b2be05f6ebb0089e2eacc38413/platformdirs-4.11.8-py3-none-any.whl
-        sha256: 52f2f181bbfde907966932cc8312d967d02976422d66d537ea16092b8e291081
+        url: https://files.pythonhosted.org/packages/ec/2b/69de6317fbf48865bb12aa56c9cfcfff46b3add0cd45250725d96146dce0/platformdirs-4.11.12-py3-none-any.whl
+        sha256: b1ba966ac76153d9985a0787ffab951e7c18416189873d4e4ddb2c8a04a0a254
   - name: python3-pluggy
     buildsystem: simple
     build-commands:
@@ -118,11 +118,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "pypdf==6.18.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "pypdf==6.19.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/58/13/645df3995075112cb3cce15e8797c205f0f88fb50acc11012b84b071bc22/pypdf-6.18.1-py3-none-any.whl
-        sha256: ee93a2665670ecf57ee81d197a4ca548f3dc15f9cefc56e59b8140866aaa3de5
+        url: https://files.pythonhosted.org/packages/3c/2c/c43c03eaf630435f023f1dc61ec4a4a78951ad5530a62c71cc89bde307b7/pypdf-6.19.0-py3-none-any.whl
+        sha256: 7e5d6e730e7dae87d560a2cee218b852f6498c8be61966f3cd02ead971e48d14
   - name: python3-pymupdf
     buildsystem: simple
     build-commands:
