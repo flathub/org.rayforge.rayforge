@@ -278,7 +278,7 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "ruida-pa==0.20.4" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "ruida-pa==0.20.4" --no-build-isolation --no-deps
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/7a/9d/52744aaf3372f535f55aa1d59f4a266dc94ceb13ab7dcc356a74e6075ea6/ruida_pa-0.20.4-py3-none-any.whl
