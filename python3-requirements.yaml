@@ -287,7 +287,7 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "rpyc==6.0.2" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "rpyc==6.0.2" --no-build-isolation --no-deps
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/3f/99/2e119d541d596daea39643eb9312b47c7847383951300f889166938035b1/rpyc-6.0.2-py3-none-any.whl
