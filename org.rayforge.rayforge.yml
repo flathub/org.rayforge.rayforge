@@ -190,24 +190,34 @@ modules:
         url: https://files.pythonhosted.org/packages/d7/75/35823e4419df8792191b2a17ae3fe71b41d02c162b2c491c94d1a87f0caa/msgpack-1.2.2-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl
         sha256: 1814f92306ae7862908e9ece7cfd90e0dc87ded3e89b6ae7ffdd1175d6376fdc
 
+  # raygeo and raydriver ship prebuilt manylinux wheels for both x86_64 and
+  # aarch64 (cp311-abi3), so no Rust compilation is needed anymore. Their
+  # runtime dependencies (msgpack, numpy) are installed by separate modules.
   - name: python3-raygeo
     buildsystem: simple
-    build-options:
-      append-path: /usr/lib/sdk/rust-stable/bin
-      env:
-        CARGO_HOME: /run/build/python3-raygeo/cargo
-        CARGO_NET_OFFLINE: 'true'
     build-commands:
-      - cargo --offline fetch --manifest-path ./Cargo.toml
-      - maturin build --release --compatibility linux --manifest-path ./Cargo.toml
-      - pip3 install --verbose --exists-action=i --no-index --find-links=file://${PWD}/target/wheels
-        --prefix=${FLATPAK_DEST} raygeo --no-build-isolation
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "raygeo==1.58.2" --no-deps --no-build-isolation
     sources:
-      - cargo-sources-raygeo.json
-      - type: git
-        url: https://github.com/barebaric/raygeo.git
-        tag: v1.52.0
-        commit: 35d25f1342c3e6474f2fdb3a1433f9c0c502d7e8
+      - type: file
+        url: https://files.pythonhosted.org/packages/e1/5c/a1f054f2246f1df5f4af71a95d1dbe66d18cf24d60920f481754276c4018/raygeo-1.58.2-cp311-abi3-manylinux_2_35_x86_64.whl
+        sha256: 9e86f38540329904ea8ffcd5072d82c65d373a92dbad4c9cf9cf3a5ada9e742b
+      - type: file
+        url: https://files.pythonhosted.org/packages/86/7c/779163155dd9ffb6feaff2a4b41e7c2443c2db17a6b024e02f6adf87704d/raygeo-1.58.2-cp311-abi3-manylinux_2_35_aarch64.whl
+        sha256: 5dac62db57a931577dcec7cebd96f777bc1a87b423884151ddf4684b184a4770
+
+  - name: python3-raydriver
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "raydriver==0.2.0" --no-deps --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/4e/38/f7d4061b5d6c0ec75886bb507cf250dc0a1af2f97083e7e63759f534db98/raydriver-0.2.0-cp311-abi3-manylinux_2_34_x86_64.whl
+        sha256: dafd2f2d41b653a168a7d679d6963e57f4fd3f458a237cc211816c1cb148726a
+      - type: file
+        url: https://files.pythonhosted.org/packages/92/d8/ca6f91317d4a574f6aa244b61601897a1b4e7aa31bc372116dbba7a85af9/raydriver-0.2.0-cp311-abi3-manylinux_2_34_aarch64.whl
+        sha256: 425dddb1aaa2e011e2f364d12389685f3bfc70c1bab3c8458ee0d7b55b8a537c
 
 
   - name: python3-pyclipper
@@ -257,9 +267,9 @@ modules:
     sources:
       - type: git
         url: https://github.com/barebaric/rayforge.git
-        tag: 1.11.2
+        tag: 1.12.0
         x-checker-data:
           type: git
           url: https://github.com/barebaric/rayforge.git
           tag-pattern: ^([\d\.]+(?:-[\w\.]+)?)$
-        commit: 0eb91d3f36e23a3d3566d99c3472e380ff2e09a0
+        commit: ee1f194998768d04b65aec1223df90bc972240c6
