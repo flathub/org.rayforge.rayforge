@@ -82,11 +82,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "platformdirs==4.11.12" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "platformdirs==4.12.1" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/ec/2b/69de6317fbf48865bb12aa56c9cfcfff46b3add0cd45250725d96146dce0/platformdirs-4.11.12-py3-none-any.whl
-        sha256: b1ba966ac76153d9985a0787ffab951e7c18416189873d4e4ddb2c8a04a0a254
+        url: https://files.pythonhosted.org/packages/40/31/1521c38d175108ac395941adbcb9f11e085340bed81ad166e8ad8c21c17b/platformdirs-4.12.1-py3-none-any.whl
+        sha256: 7f251621befae78b2cb74616f9fc99d3fa3db0afba5035987731f8dcd430337d
   - name: python3-pluggy
     buildsystem: simple
     build-commands:
@@ -265,4 +265,31 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/e0/d2/a1c5316026abca5d9b66d039911a3b72deb0296b40836cfacc1a171dd44c/zeroconf-0.151.3-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl
         sha256: 45bd0e92fcbb6f8d5851f5575792b5f18a85856ae69fee601da4ed3d7cdcfa09
+  - name: python3-plumbum
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "plumbum==2.0.2" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/b5/55/fdd01894807d20fb6181f13590ae247585b10e909b42e6ada833379fe520/plumbum-2.0.2-py3-none-any.whl
+        sha256: a865771826c1d2cce0ca8b2a2c48aa0447ed7a518859e389a95f158e9c369547
+  - name: python3-ruida-pa
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "ruida-pa==0.21.2" --no-build-isolation --no-deps
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/0c/ef/7cd8d552500d28dc184f55bd80e99fa2c8c07ba4fe97d09ea093bfa0affa/ruida_pa-0.21.2-py3-none-any.whl
+        sha256: 7a54ff6abb07182a265212261a3162b88acee49e5ceb8e314acd209f3d22062b
+  - name: python3-rpyc
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "rpyc==6.0.2" --no-build-isolation --no-deps
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/3f/99/2e119d541d596daea39643eb9312b47c7847383951300f889166938035b1/rpyc-6.0.2-py3-none-any.whl
+        sha256: 8072308ad30725bc281c42c011fc8c922be15f3eeda6eafb2917cafe1b6f00ec
 name: python3-requirements
