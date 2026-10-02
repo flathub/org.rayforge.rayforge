@@ -278,11 +278,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "ruida-pa==0.21.1" --no-build-isolation --no-deps
+        --prefix=${FLATPAK_DEST} "ruida-pa==0.21.2" --no-build-isolation --no-deps
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/14/97/9285b51a648c0beb5e3b5d9337749a3def00a2c320dc3ee320dbc85c3050/ruida_pa-0.21.1-py3-none-any.whl
-        sha256: 2fc1a7fb796928f43b23ed360d61ba08843da2126efc6c6fd1a19fbb50d857cb
+        url: https://files.pythonhosted.org/packages/0c/ef/7cd8d552500d28dc184f55bd80e99fa2c8c07ba4fe97d09ea093bfa0affa/ruida_pa-0.21.2-py3-none-any.whl
+        sha256: 7a54ff6abb07182a265212261a3162b88acee49e5ceb8e314acd209f3d22062b
   - name: python3-rpyc
     buildsystem: simple
     build-commands:
