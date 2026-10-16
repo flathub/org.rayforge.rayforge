@@ -24,14 +24,14 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "gitpython==3.1.62" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "gitpython==3.2.0" --no-build-isolation
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/a0/61/5c78b91c3143ed5c14207f463aecfc8f9dbb5092fb2869baf37c273b2705/gitdb-4.0.12-py3-none-any.whl
         sha256: 67073e15955400952c6565cc3e707c554a4eea2e428946f7a4c162fab9bd9bcf
       - type: file
-        url: https://files.pythonhosted.org/packages/d6/0b/29d7965215f8ef830a7ca1f42997fe13e5693d85e9edb18f938d063ef5f2/gitpython-3.1.62-py3-none-any.whl
-        sha256: 7002251225e10e29d2e1f49e6532613fe5d5d9f0b6f1f02997a52b38fe56899e
+        url: https://files.pythonhosted.org/packages/fa/48/f36d233ce749d1bb880cb5e6f8bb171dc2effabc7435c31da604d831b3ec/gitpython-3.2.0-py3-none-any.whl
+        sha256: bd70c5ec05cd2b797423e7eb312147d2458d3cca92085888fba2213f85905537
       - type: file
         url: https://files.pythonhosted.org/packages/c1/d4/59e74daffcb57a07668852eeeb6035af9f32cbfd7a1d2511f17d2fe6a738/smmap-5.0.3-py3-none-any.whl
         sha256: c106e05d5a61449cf6ba9a1e650227ecfb141590d2a98412103ff35d89fc7b2f
@@ -58,14 +58,14 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "numpy==2.5.3" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "numpy==2.5.4" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/3a/1b/3b16a9bc514a440a7a0883684111dcb1ef1aee960af2ca95da8fc775f124/numpy-2.5.3-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
-        sha256: a5fa86b80fd24bcd1aff83ad23be44ea323de3f787be8f8b15d4a65621e25321
+        url: https://files.pythonhosted.org/packages/da/24/3bd070f3269dc609d8f26b2643f62ef91bb415841c0b294805aaf7fe06da/numpy-2.5.4-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+        sha256: 6ffa07666f8da0eef81d149934a626d0d95fbd6838432a33e66245423a9062c0
       - type: file
-        url: https://files.pythonhosted.org/packages/73/85/735720d04ec197c5dcfacdfc9922667c7f1f5f496a279b7ba4d7c74c4cc7/numpy-2.5.3-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl
-        sha256: c76d5dde9f445058f83d0c02af00557a4db91de9a9a57c0df87d1535001d654b
+        url: https://files.pythonhosted.org/packages/db/b6/135bb0953b61dc21c6cafa14b424ae666944e4899cf140e00c2b322a1a45/numpy-2.5.4-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl
+        sha256: 1c2e71b04c6cad90026e544501bbe0ab9290fa8a4d845e7e8c0d124fb429c988
   - name: python3-opencv_python
     buildsystem: simple
     build-commands:
@@ -82,11 +82,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "platformdirs==4.12.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "platformdirs==4.13.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/40/31/1521c38d175108ac395941adbcb9f11e085340bed81ad166e8ad8c21c17b/platformdirs-4.12.1-py3-none-any.whl
-        sha256: 7f251621befae78b2cb74616f9fc99d3fa3db0afba5035987731f8dcd430337d
+        url: https://files.pythonhosted.org/packages/8d/15/1633010b26e88e872c93b67c0b6c5e174fb74cb6fb5c1472b4d51d4a8f22/platformdirs-4.13.0-py3-none-any.whl
+        sha256: 3dbcf4cd708f21cf876c4eaa90e58412bc4f033d87143f41b1493ff77c25b7e1
   - name: python3-pluggy
     buildsystem: simple
     build-commands:
@@ -118,11 +118,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "pypdf==6.19.0" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "pypdf==6.20.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/3c/2c/c43c03eaf630435f023f1dc61ec4a4a78951ad5530a62c71cc89bde307b7/pypdf-6.19.0-py3-none-any.whl
-        sha256: 7e5d6e730e7dae87d560a2cee218b852f6498c8be61966f3cd02ead971e48d14
+        url: https://files.pythonhosted.org/packages/18/42/a945f65cc61c739ec80f4112c4b78ed1791f25d33f45f19389c9c9e247e2/pypdf-6.20.0-py3-none-any.whl
+        sha256: f003fc2014814d264fe7dd3f9d435c158e23e1a85a2233f87a0a2d6d21c914ad
   - name: python3-pymupdf
     buildsystem: simple
     build-commands:
@@ -202,23 +202,23 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "websockets==17.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "websockets==17.2" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/41/63/23572870e01836a98346075b9e17a8bc24a6ddd9800a3204ceee58677f3c/websockets-17.1-py3-none-any.whl
-        sha256: f221081107b8c48184d99f7019604486376e7ef826037e70aad6b02540732c23
+        url: https://files.pythonhosted.org/packages/8a/58/835cd51934d6780fa586f275b5d9901eead6d81569b4343b3767cdbaae4c/websockets-17.2-py3-none-any.whl
+        sha256: 6aa59f0ef92e796b2db6f5f26550c4713c0e4036899fadf02f55e2ed4db0b7ae
   - name: python3-aiohttp
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "aiohttp==3.14.3" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "aiohttp==3.14.5" --no-build-isolation
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/71/43/1947f06babed6b3f1d7f38b0c767f52df66bfb2bc10b468c4a7de9eceff2/aiohappyeyeballs-2.7.1-py3-none-any.whl
         sha256: 9243213661e29250eb41368e5daa826fc017156c3b8a11440826b2e3ed376472
       - type: file
-        url: https://files.pythonhosted.org/packages/58/d9/22ce5786ac0c1653ae8b6c23bded02c1686d11f0dbb45b31ce128e0df985/aiohttp-3.14.3.tar.gz
-        sha256: 9491196535a88924a60afd5b5f434b5b203b6cc616250878dbdb223a8f7844bc
+        url: https://files.pythonhosted.org/packages/68/30/173960c42b05a6c59f7558e4b12a4b0d9ba376cf6aa9bde7f9e08a30ca8d/aiohttp-3.14.5-py3-none-any.whl
+        sha256: efc21a454892828368b11c2c780de0ff8bc991f73f6b99c6b66e56205470929b
       - type: file
         url: https://files.pythonhosted.org/packages/fb/76/641ae371508676492379f16e2fa48f4e2c11741bd63c48be4b12a6b09cba/aiosignal-1.4.0-py3-none-any.whl
         sha256: 053243f8b92b990551949e63930a839ff0cf0b0ebbe0597b0f3fb19e1a0fe82e
@@ -229,42 +229,42 @@ modules:
         url: https://files.pythonhosted.org/packages/9a/9a/e35b4a917281c0b8419d4207f4334c8e8c5dbf4f3f5f9ada73958d937dcc/frozenlist-1.8.0-py3-none-any.whl
         sha256: 0c18a16eab41e82c295618a77502e17b195883241c563b00f0aa5106fc4eaa0d
       - type: file
-        url: https://files.pythonhosted.org/packages/57/b0/0e52c878c53f245edd3a11020f20979b3f490f245af532c7cae3027754b5/idna-3.19-py3-none-any.whl
-        sha256: 815e7be7a7806d54abb586dc943addc79e8b2ee16915059658cbeff4b1b43bf4
+        url: https://files.pythonhosted.org/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl
+        sha256: ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c
       - type: file
-        url: https://files.pythonhosted.org/packages/81/08/7036c080d7117f28a4af526d794aab6a84463126db031b007717c1a6676e/multidict-6.7.1-py3-none-any.whl
-        sha256: 55d97cc6dae627efa6a6e548885712d4864b81110ac76fa4e534c03819fa4a56
+        url: https://files.pythonhosted.org/packages/d0/86/a3de309c5e28ee85b314d0e3ba0e0dea6fd361c313322a05e67be4656e1e/multidict-7.1.0-py3-none-any.whl
+        sha256: d9ef29cfd98e17085b4f91bba8fa1570bec6787d5c52ce653ed33a58785585d0
       - type: file
-        url: https://files.pythonhosted.org/packages/3a/ed/1cdcab6ba3d6ab7feca11fc14f0eeea80755bb53ef4e892079f31b10a25f/propcache-0.5.2-py3-none-any.whl
-        sha256: be1ddfcbb376e3de5d2e2db1d58d6d67463e6b4f9f040c000de8e300295465fe
+        url: https://files.pythonhosted.org/packages/f5/cd/785c64ed382f3f04201870267b02783f63b4678c2acfddc177a3ebcc2727/propcache-0.5.4-py3-none-any.whl
+        sha256: 62c60aec739ed00124573cce1178138fd690c7676352d67a37328c1cf51d7468
       - *id003
       - type: file
-        url: https://files.pythonhosted.org/packages/61/02/962c1cbfc401a30c1d034dc67ff395f64b52302c6d62de556c1fca99acc0/yarl-1.24.5-py3-none-any.whl
-        sha256: a33700d13d9b7d84fd10947b09ff69fb9a792e519c8cb9764a3ca70baa6c23a7
+        url: https://files.pythonhosted.org/packages/54/22/318c7980066769c6bcd9221ed2248294f5698811da099013098c670565ed/yarl-1.25.1-py3-none-any.whl
+        sha256: 681c758b0490f9e96b78e5fa8e8dc6e648e9185bb6eaebe73183c33ea0c445f3
   - name: python3-trimesh
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "trimesh==5.1.0" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "trimesh==5.1.1" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/f5/c8/5ede3b786ef58e0076e9ca748b2c1787183f85e5ad8133373715c31248f9/trimesh-5.1.0-py3-none-any.whl
-        sha256: 0fa85d1d131e321b683c00747c20090200b92071298b905ea588f609eb204c89
+        url: https://files.pythonhosted.org/packages/8f/f6/fb68b8c08f864ecee8f7f7ee2f1203ed5cba2335215de69e4f621eb47db5/trimesh-5.1.1-py3-none-any.whl
+        sha256: c5be85a3e31e9ff749f9b0aecc204e37a2cf7cca4e92cd066bb5f3d3c1127765
   - name: python3-zeroconf
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "zeroconf==0.151.3" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "zeroconf==0.151.5" --no-build-isolation
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/9c/1f/19ebc343cc71a7ffa78f17018535adc5cbdd87afb31d7c34874680148b32/ifaddr-0.2.0-py3-none-any.whl
         sha256: 085e0305cfe6f16ab12d72e2024030f5d52674afad6911bb1eee207177b8a748
       - type: file
-        url: https://files.pythonhosted.org/packages/62/26/5c48ea0aee6ecc7398f8d7a14373c19dded05e4bdbd250509c0a779763c0/zeroconf-0.151.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl
-        sha256: 7b514f47729ae5b9b42f066163ad509d020c34cacdda3c5efb972f3336213318
+        url: https://files.pythonhosted.org/packages/c4/1a/1fa076936c37d192c36ef122d46c6a9bf584c6f8eb693e8f1eabb814bd9e/zeroconf-0.151.5-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl
+        sha256: 92d5f219f09a45bebf28ce40776dbc1f8a0697871ceda8b6b9f2ffe8209826fe
       - type: file
-        url: https://files.pythonhosted.org/packages/e0/d2/a1c5316026abca5d9b66d039911a3b72deb0296b40836cfacc1a171dd44c/zeroconf-0.151.3-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl
-        sha256: 45bd0e92fcbb6f8d5851f5575792b5f18a85856ae69fee601da4ed3d7cdcfa09
+        url: https://files.pythonhosted.org/packages/67/27/0cacf5efeb9009efce1a10e7aefad942673f775f43aea0e425eb767da37e/zeroconf-0.151.5-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl
+        sha256: f346b414b882ac0dee5beb55bc8bd6ad8c7415f26d6ab4629d91bfd6c5f30f62
   - name: python3-plumbum
     buildsystem: simple
     build-commands:
@@ -278,11 +278,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "ruida-pa==0.21.2" --no-build-isolation --no-deps
+        --prefix=${FLATPAK_DEST} "ruida-pa==0.22.0" --no-build-isolation --no-deps
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/0c/ef/7cd8d552500d28dc184f55bd80e99fa2c8c07ba4fe97d09ea093bfa0affa/ruida_pa-0.21.2-py3-none-any.whl
-        sha256: 7a54ff6abb07182a265212261a3162b88acee49e5ceb8e314acd209f3d22062b
+        url: https://files.pythonhosted.org/packages/03/43/344fbf03470b38c11c334fd1ea9f12212036c93f64887d1f31672a95fd8d/ruida_pa-0.22.0-py3-none-any.whl
+        sha256: 142c96e252cf8f7190bfc840319e888e3efe60f22be2cc38211a229926bb22a0
   - name: python3-rpyc
     buildsystem: simple
     build-commands:
