@@ -102,8 +102,8 @@ modules:
         buildsystem: meson
         sources:
           - type: archive
-            url: https://github.com/libvips/libvips/releases/download/v8.18.6/vips-8.18.6.tar.xz
-            sha256: 3c41e1d5458081bfa4a5bc54e116c46259c75c6760a18027764555632b9dda3e
+            url: https://github.com/libvips/libvips/releases/download/v8.18.7/vips-8.18.7.tar.xz
+            sha256: 5baaead3b0bb20ffdb9e9ff09aa9fda08620923df77b63b436654cb5e0b3bf94
       - name: python3-cffi
         buildsystem: simple
         build-commands:
@@ -132,8 +132,8 @@ modules:
       - -DDYNAMIC_ARCH=ON
     sources:
       - type: archive
-        url: https://github.com/OpenMathLib/OpenBLAS/releases/download/v0.3.31/OpenBLAS-0.3.31.tar.gz
-        sha256: 6dd2a63ac9d32643b7cc636eab57bf4e57d0ed1fff926dfbc5d3d97f2d2be3a6
+        url: https://github.com/OpenMathLib/OpenBLAS/releases/download/v0.3.34/OpenBLAS-0.3.34.tar.gz
+        sha256: cd7e129868320cc2d033afa920e31202dfe0b8066a5b66661900ccc0f197dfed
 
   - name: python3-maturin
     buildsystem: simple
@@ -181,14 +181,14 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "msgpack==1.2.2" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "msgpack==1.2.3" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/6e/d3/6592e4064619b04f2dd0054c5fa13e37e3d55eb26044483d871fadb2f46b/msgpack-1.2.2-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl
-        sha256: d24b38a825bcca41bb956de50eb98451ef291304a8607fad99e619043d3e79b9
+        url: https://files.pythonhosted.org/packages/b0/30/c394d37898db9212d1693456cdf363c7e1a097d0b63e10664007f3df3ec1/msgpack-1.2.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl
+        sha256: 07c9733089d1b176c3dd2f7fa268452f9d5d784d076473499d754a58e8d1fbbb
       - type: file
-        url: https://files.pythonhosted.org/packages/d7/75/35823e4419df8792191b2a17ae3fe71b41d02c162b2c491c94d1a87f0caa/msgpack-1.2.2-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl
-        sha256: 1814f92306ae7862908e9ece7cfd90e0dc87ded3e89b6ae7ffdd1175d6376fdc
+        url: https://files.pythonhosted.org/packages/08/6a/e5fc57136e8bacccb2b39627dea2cd546540a06181e22fe6db90e15b3ae4/msgpack-1.2.3-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl
+        sha256: 5e0d7950ca3c1bbae291d0552dd3bb2792fc680629c4c0d44e47e5bab969f3ca
 
   # raygeo and raydriver ship prebuilt manylinux wheels for both x86_64 and
   # aarch64 (cp311-abi3), so no Rust compilation is needed anymore. Their
@@ -197,27 +197,27 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "raygeo==1.58.2" --no-deps --no-build-isolation
+        --prefix=${FLATPAK_DEST} "raygeo==1.67.1" --no-deps --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/e1/5c/a1f054f2246f1df5f4af71a95d1dbe66d18cf24d60920f481754276c4018/raygeo-1.58.2-cp311-abi3-manylinux_2_35_x86_64.whl
-        sha256: 9e86f38540329904ea8ffcd5072d82c65d373a92dbad4c9cf9cf3a5ada9e742b
+        url: https://files.pythonhosted.org/packages/76/d8/5b566857ffe9f32e0b166f59b347d5219232933d263d0815431cfac9e59b/raygeo-1.67.1-cp311-abi3-manylinux_2_35_x86_64.whl
+        sha256: 523b742be7e2b4de4b118a3b4b564c0ba96d7cc25c0a39552a8384ffcc61c3d2
       - type: file
-        url: https://files.pythonhosted.org/packages/86/7c/779163155dd9ffb6feaff2a4b41e7c2443c2db17a6b024e02f6adf87704d/raygeo-1.58.2-cp311-abi3-manylinux_2_35_aarch64.whl
-        sha256: 5dac62db57a931577dcec7cebd96f777bc1a87b423884151ddf4684b184a4770
+        url: https://files.pythonhosted.org/packages/41/f3/dd6a4d4a82bb744d5b587f884e25efe3f527f690a06ef9563f12245e1c98/raygeo-1.67.1-cp311-abi3-manylinux_2_35_aarch64.whl
+        sha256: 3d4e42b001d746f733c3a61d40e6db484b7c664eb2bfbb9c946c14fe84847e2a
 
   - name: python3-raydriver
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "raydriver==0.2.0" --no-deps --no-build-isolation
+        --prefix=${FLATPAK_DEST} "raydriver==0.5.1" --no-deps --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/4e/38/f7d4061b5d6c0ec75886bb507cf250dc0a1af2f97083e7e63759f534db98/raydriver-0.2.0-cp311-abi3-manylinux_2_34_x86_64.whl
-        sha256: dafd2f2d41b653a168a7d679d6963e57f4fd3f458a237cc211816c1cb148726a
+        url: https://files.pythonhosted.org/packages/d1/ca/28bf96300f869a28925c73b77edec62a87c6f7eac468b6d3b7e082cee19d/raydriver-0.5.1-cp311-abi3-manylinux_2_34_x86_64.whl
+        sha256: f605b36f76ec5524602ad19c52d1b32429a9fc9e1415648e3b52dcc0ce263ed9
       - type: file
-        url: https://files.pythonhosted.org/packages/92/d8/ca6f91317d4a574f6aa244b61601897a1b4e7aa31bc372116dbba7a85af9/raydriver-0.2.0-cp311-abi3-manylinux_2_34_aarch64.whl
-        sha256: 425dddb1aaa2e011e2f364d12389685f3bfc70c1bab3c8458ee0d7b55b8a537c
+        url: https://files.pythonhosted.org/packages/42/f7/bd961199bc3f2071db68974103b797818db178af2b6ec645fbbd2557551f/raydriver-0.5.1-cp311-abi3-manylinux_2_34_aarch64.whl
+        sha256: 41e317e8a4260cc50f4052631694f911d08836e2a284e4cfdf28b8dd1b1a9410
 
 
   - name: python3-pyclipper
@@ -237,8 +237,8 @@ modules:
         --prefix=${FLATPAK_DEST} "expandvars" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/29/ff/a2440069461c63b95fa8b5b89e26eb606e57d8a01391ccaae3738f1b845d/expandvars-1.0.0-py3-none-any.whl
-        sha256: ff1690eceb90bbdeefd1e4b15f4d217f22a3e66f776c2cb060635d2dde4a7689
+        url: https://files.pythonhosted.org/packages/7f/e6/79c43f7a55264e479a9fbf21ddba6a73530b3ea8439a8bb7fa5a281721af/expandvars-1.1.2-py3-none-any.whl
+        sha256: d1652fe4e61914f5b88ada93aaedb396446f55ae4621de45c8cb9f66e5712526
 
   - shared-modules/glu/glu-9.json
   - python3-requirements.yaml
@@ -267,9 +267,9 @@ modules:
     sources:
       - type: git
         url: https://github.com/barebaric/rayforge.git
-        tag: 1.12.0
+        tag: 1.13.0
         x-checker-data:
           type: git
           url: https://github.com/barebaric/rayforge.git
           tag-pattern: ^([\d\.]+(?:-[\w\.]+)?)$
-        commit: ee1f194998768d04b65aec1223df90bc972240c6
+        commit: 2c927cc531f0a8ef577e6fc5dbc065fa43697174
