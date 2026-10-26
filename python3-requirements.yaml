@@ -241,8 +241,8 @@ modules:
         url: https://files.pythonhosted.org/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl
         sha256: ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c
       - type: file
-        url: https://files.pythonhosted.org/packages/d0/86/a3de309c5e28ee85b314d0e3ba0e0dea6fd361c313322a05e67be4656e1e/multidict-7.1.0-py3-none-any.whl
-        sha256: d9ef29cfd98e17085b4f91bba8fa1570bec6787d5c52ce653ed33a58785585d0
+        url: https://files.pythonhosted.org/packages/9d/96/1aaad0e5df33f1f5af21775c411349c0234a6edd581ea403bc81919a6eab/multidict-7.2.1-py3-none-any.whl
+        sha256: 08ea94663d9e7c25d14d78222f7aee906c472d4837766bec62477c38f6e419dc
       - type: file
         url: https://files.pythonhosted.org/packages/f5/cd/785c64ed382f3f04201870267b02783f63b4678c2acfddc177a3ebcc2727/propcache-0.5.4-py3-none-any.whl
         sha256: 62c60aec739ed00124573cce1178138fd690c7676352d67a37328c1cf51d7468
