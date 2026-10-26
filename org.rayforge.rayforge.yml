@@ -197,14 +197,14 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "raygeo==1.67.1" --no-deps --no-build-isolation
+        --prefix=${FLATPAK_DEST} "raygeo==1.67.2" --no-deps --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/76/d8/5b566857ffe9f32e0b166f59b347d5219232933d263d0815431cfac9e59b/raygeo-1.67.1-cp311-abi3-manylinux_2_35_x86_64.whl
-        sha256: 523b742be7e2b4de4b118a3b4b564c0ba96d7cc25c0a39552a8384ffcc61c3d2
+        url: https://files.pythonhosted.org/packages/13/44/2997a61b5f15180bb5393df640c8a36f5da7f9da32695ee58085a2c29947/raygeo-1.67.2-cp311-abi3-manylinux_2_35_x86_64.whl
+        sha256: 91813e392ff65b9475c46d683312efd494214227ba65c6e1a88f9b3e3fd6f97a
       - type: file
-        url: https://files.pythonhosted.org/packages/41/f3/dd6a4d4a82bb744d5b587f884e25efe3f527f690a06ef9563f12245e1c98/raygeo-1.67.1-cp311-abi3-manylinux_2_35_aarch64.whl
-        sha256: 3d4e42b001d746f733c3a61d40e6db484b7c664eb2bfbb9c946c14fe84847e2a
+        url: https://files.pythonhosted.org/packages/b5/ad/1e6501d92389f401ce83f2018538e6202340513793b8c13f2dee3aa7e480/raygeo-1.67.2-cp311-abi3-manylinux_2_35_aarch64.whl
+        sha256: c8fce51292b637bb7d879b3bd622c5b555dd3b36d4c3e6da309bb6a0c137badf
 
   - name: python3-raydriver
     buildsystem: simple
@@ -267,9 +267,9 @@ modules:
     sources:
       - type: git
         url: https://github.com/barebaric/rayforge.git
-        tag: 1.13.0
+        tag: 1.13.1
         x-checker-data:
           type: git
           url: https://github.com/barebaric/rayforge.git
           tag-pattern: ^([\d\.]+(?:-[\w\.]+)?)$
-        commit: 2c927cc531f0a8ef577e6fc5dbc065fa43697174
+        commit: db9f4ad2aa0e9a6680180f7036921fea147e711b

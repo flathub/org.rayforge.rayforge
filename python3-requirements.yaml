@@ -118,11 +118,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "pypdf==6.21.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "pypdf==6.21.2" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/85/e6/24c944e473c34e818cf1b98085796fcd780465ecfe17663f2bf8fee1958b/pypdf-6.21.1-py3-none-any.whl
-        sha256: 553e2d42f5bb3bb2a785a7d3de8ef90bb7df74b5413eff5a7b4388007ea9254b
+        url: https://files.pythonhosted.org/packages/1b/4d/c9d2d67f204eff463237a1a8f5e25a6923b7b1043982b91fcaf104c8ef60/pypdf-6.21.2-py3-none-any.whl
+        sha256: 1d44d1a3a200f25062adff0085b02040e4646431ac2ccac22e42679e91466084
   - name: python3-pymupdf
     buildsystem: simple
     build-commands:
@@ -211,11 +211,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "websockets==17.2" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "websockets==17.3" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/8a/58/835cd51934d6780fa586f275b5d9901eead6d81569b4343b3767cdbaae4c/websockets-17.2-py3-none-any.whl
-        sha256: 6aa59f0ef92e796b2db6f5f26550c4713c0e4036899fadf02f55e2ed4db0b7ae
+        url: https://files.pythonhosted.org/packages/d7/b0/3f01fcb3406662f6deb1e3e72b34dd0979e993991c0b7435a9e12bc14f02/websockets-17.3-py3-none-any.whl
+        sha256: dc2b495a92b3971966bf102e73589f950db3ec1ca6713265355ce7771d97b199
   - name: python3-aiohttp
     buildsystem: simple
     build-commands:
@@ -241,8 +241,8 @@ modules:
         url: https://files.pythonhosted.org/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl
         sha256: ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c
       - type: file
-        url: https://files.pythonhosted.org/packages/d0/86/a3de309c5e28ee85b314d0e3ba0e0dea6fd361c313322a05e67be4656e1e/multidict-7.1.0-py3-none-any.whl
-        sha256: d9ef29cfd98e17085b4f91bba8fa1570bec6787d5c52ce653ed33a58785585d0
+        url: https://files.pythonhosted.org/packages/9d/96/1aaad0e5df33f1f5af21775c411349c0234a6edd581ea403bc81919a6eab/multidict-7.2.1-py3-none-any.whl
+        sha256: 08ea94663d9e7c25d14d78222f7aee906c472d4837766bec62477c38f6e419dc
       - type: file
         url: https://files.pythonhosted.org/packages/f5/cd/785c64ed382f3f04201870267b02783f63b4678c2acfddc177a3ebcc2727/propcache-0.5.4-py3-none-any.whl
         sha256: 62c60aec739ed00124573cce1178138fd690c7676352d67a37328c1cf51d7468
@@ -254,11 +254,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "trimesh==5.1.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "trimesh==5.2.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/8f/f6/fb68b8c08f864ecee8f7f7ee2f1203ed5cba2335215de69e4f621eb47db5/trimesh-5.1.1-py3-none-any.whl
-        sha256: c5be85a3e31e9ff749f9b0aecc204e37a2cf7cca4e92cd066bb5f3d3c1127765
+        url: https://files.pythonhosted.org/packages/51/14/78624d9c89bab76c2a2e1e839c7641fa686828c2c1c8fb64aedf3b371a5d/trimesh-5.2.0-py3-none-any.whl
+        sha256: 04db2c7ec62afdd7763fb04c82bb5f257ddd984993a19ee83697f475fc58fd29
   - name: python3-zeroconf
     buildsystem: simple
     build-commands:
@@ -287,11 +287,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "ruida-pa==0.22.0" --no-build-isolation --no-deps
+        --prefix=${FLATPAK_DEST} "ruida-pa==0.23.0" --no-build-isolation --no-deps
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/03/43/344fbf03470b38c11c334fd1ea9f12212036c93f64887d1f31672a95fd8d/ruida_pa-0.22.0-py3-none-any.whl
-        sha256: 142c96e252cf8f7190bfc840319e888e3efe60f22be2cc38211a229926bb22a0
+        url: https://files.pythonhosted.org/packages/19/c6/7c87ac388dc9e11a65a4f0bc3abb03aeb8e3af0cef0ee1fb2c124a993e0f/ruida_pa-0.23.0-py3-none-any.whl
+        sha256: 7c6533194b7c420459ef56077dc07edad2da85cc555046530cf8d407798e6aa2
   - name: python3-rpyc
     buildsystem: simple
     build-commands:
