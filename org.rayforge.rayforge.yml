@@ -214,16 +214,16 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "raygeo==1.67.2" --no-deps --no-build-isolation
+        --prefix=${FLATPAK_DEST} "raygeo==1.67.3" --no-deps --no-build-isolation
     sources:
       - type: file
         url: 
-          https://files.pythonhosted.org/packages/13/44/2997a61b5f15180bb5393df640c8a36f5da7f9da32695ee58085a2c29947/raygeo-1.67.2-cp311-abi3-manylinux_2_35_x86_64.whl
-        sha256: 91813e392ff65b9475c46d683312efd494214227ba65c6e1a88f9b3e3fd6f97a
+          https://files.pythonhosted.org/packages/0b/7e/1a661eb534b3a481eff9da0e567a4d83749ae4f799b31e61e4bd4d0d3f84/raygeo-1.67.3-cp311-abi3-manylinux_2_35_x86_64.whl
+        sha256: 631da72e9491074dd4df42a6b5f1fa5bba3efaac29715bbb856897589d0088d8
       - type: file
         url: 
-          https://files.pythonhosted.org/packages/b5/ad/1e6501d92389f401ce83f2018538e6202340513793b8c13f2dee3aa7e480/raygeo-1.67.2-cp311-abi3-manylinux_2_35_aarch64.whl
-        sha256: c8fce51292b637bb7d879b3bd622c5b555dd3b36d4c3e6da309bb6a0c137badf
+          https://files.pythonhosted.org/packages/74/b7/2e52190834f728cf595865938d0fe4696de9211bdc33082aab159eca6a26/raygeo-1.67.3-cp311-abi3-manylinux_2_35_aarch64.whl
+        sha256: a89dc4143c6a2ba08d9d6daba553db1edfca63552db1f0376bb82d8932a70285
 
   - name: python3-raydriver
     buildsystem: simple
