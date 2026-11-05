@@ -263,7 +263,7 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "zeroconf==0.151.5" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "zeroconf==0.153.0" --no-build-isolation
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/9c/1f/19ebc343cc71a7ffa78f17018535adc5cbdd87afb31d7c34874680148b32/ifaddr-0.2.0-py3-none-any.whl
