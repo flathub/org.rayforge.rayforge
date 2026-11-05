@@ -197,27 +197,27 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "raygeo==1.67.3" --no-deps --no-build-isolation
+        --prefix=${FLATPAK_DEST} "raygeo==1.73.0" --no-deps --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/0b/7e/1a661eb534b3a481eff9da0e567a4d83749ae4f799b31e61e4bd4d0d3f84/raygeo-1.67.3-cp311-abi3-manylinux_2_35_x86_64.whl
-        sha256: 631da72e9491074dd4df42a6b5f1fa5bba3efaac29715bbb856897589d0088d8
+        url: https://files.pythonhosted.org/packages/37/45/8defde2b989a4a092599da70acca9eba57fb0d0bbfb8311b18f4a7151381/raygeo-1.73.0-cp311-abi3-manylinux_2_38_x86_64.whl
+        sha256: 738a0a776497e9c0a2b945ab91d87c1e21845a2dcce4256fd432f8ad54367374
       - type: file
-        url: https://files.pythonhosted.org/packages/74/b7/2e52190834f728cf595865938d0fe4696de9211bdc33082aab159eca6a26/raygeo-1.67.3-cp311-abi3-manylinux_2_35_aarch64.whl
-        sha256: a89dc4143c6a2ba08d9d6daba553db1edfca63552db1f0376bb82d8932a70285
+        url: https://files.pythonhosted.org/packages/14/77/cd9fa8977a4290b3e104d73f83835d7127d1a2d9499957548f576ea52c71/raygeo-1.73.0-cp311-abi3-manylinux_2_35_aarch64.whl
+        sha256: 7cf97faf325d5dab6b00360da5fb97cfb7501f507478db6ca97ea377dae5ee90
 
   - name: python3-raydriver
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "raydriver==0.5.1" --no-deps --no-build-isolation
+        --prefix=${FLATPAK_DEST} "raydriver==1.0.0" --no-deps --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/d1/ca/28bf96300f869a28925c73b77edec62a87c6f7eac468b6d3b7e082cee19d/raydriver-0.5.1-cp311-abi3-manylinux_2_34_x86_64.whl
-        sha256: f605b36f76ec5524602ad19c52d1b32429a9fc9e1415648e3b52dcc0ce263ed9
+        url: https://files.pythonhosted.org/packages/c0/b2/ad645e3baea9c0bf3e7b82fbc73ed05909d240cce17eb231acbb67606905/raydriver-1.0.0-cp311-abi3-manylinux_2_34_x86_64.whl
+        sha256: d7cf6dcbffa9e3f5dd9a297b82d528d943ea0f58ee4b9098f5c7ada13b6c6487
       - type: file
-        url: https://files.pythonhosted.org/packages/42/f7/bd961199bc3f2071db68974103b797818db178af2b6ec645fbbd2557551f/raydriver-0.5.1-cp311-abi3-manylinux_2_34_aarch64.whl
-        sha256: 41e317e8a4260cc50f4052631694f911d08836e2a284e4cfdf28b8dd1b1a9410
+        url: https://files.pythonhosted.org/packages/be/b6/75485739532cba174458aa4360bbad48e52ba179001db8e2eecd16e0a144/raydriver-1.0.0-cp311-abi3-manylinux_2_34_aarch64.whl
+        sha256: 716f5379d5b9cd955d5f2df88f5a990a375a9ed4c42aa0a6ec62df79b95356bd
 
 
   - name: python3-pyclipper
