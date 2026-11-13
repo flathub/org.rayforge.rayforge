@@ -23,5 +23,12 @@ jobs:
           GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
           EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # The checker runs as root in the container while the workspace is
+          # owned by the runner user, so git rejects it as "dubious ownership"
+          # until safe.directory is set. The checker only sets it before
+          # committing, which is too late for its initial git ls-files call.
+          GIT_CONFIG_COUNT: '1'
+          GIT_CONFIG_KEY_0: safe.directory
+          GIT_CONFIG_VALUE_0: '*'
         with:
           args: --update --never-fork org.rayforge.rayforge.yml
