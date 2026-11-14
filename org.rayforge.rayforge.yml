@@ -192,32 +192,33 @@ modules:
 
   # raygeo and raydriver ship prebuilt manylinux wheels for both x86_64 and
   # aarch64 (cp311-abi3), so no Rust compilation is needed anymore. Their
-  # runtime dependencies (msgpack, numpy) are installed by separate modules.
+  # runtime dependencies (msgpack, numpy, zeroconf) are installed by separate
+  # modules.
   - name: python3-raygeo
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "raygeo==1.74.0" --no-deps --no-build-isolation
+        --prefix=${FLATPAK_DEST} "raygeo==1.76.0" --no-deps --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/79/11/ff93355eb84394f70f4e511211619c490543e973d972fde1cecf841bd7a0/raygeo-1.74.0-cp311-abi3-manylinux_2_38_x86_64.whl
-        sha256: 6475956706fb32c44210a25ffd1d3cc51aeb3ba3e9e4a2bdc508ab51c2555311
+        url: https://files.pythonhosted.org/packages/18/45/79e49fc26088b78818ac05f0836c130eb5841617d40c50e3de61563e77ac/raygeo-1.76.0-cp311-abi3-manylinux_2_35_x86_64.whl
+        sha256: 28c423370af956154c911619c17f4994209d046d66396e28f353069366b61652
       - type: file
-        url: https://files.pythonhosted.org/packages/2d/3d/745772004b31cfe0bbd2aab1f45ec1d79304b959ac83dfe2dd0fc7505e20/raygeo-1.74.0-cp311-abi3-manylinux_2_35_aarch64.whl
-        sha256: d974a2dd6806116497a41bd63f0513498de0a3c81928a2dc85d05d6febfb5bef
+        url: https://files.pythonhosted.org/packages/3d/7e/2bf4478b819aaf3cd7c93314baa66208f8918bb9a370a758bbdfb1a70989/raygeo-1.76.0-cp311-abi3-manylinux_2_35_aarch64.whl
+        sha256: af404084023278444d4ed7f96256599e217dbee8c29332e5c15c4672fba4c434
 
   - name: python3-raydriver
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "raydriver==1.0.0" --no-deps --no-build-isolation
+        --prefix=${FLATPAK_DEST} "raydriver==1.3.2" --no-deps --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/c0/b2/ad645e3baea9c0bf3e7b82fbc73ed05909d240cce17eb231acbb67606905/raydriver-1.0.0-cp311-abi3-manylinux_2_34_x86_64.whl
-        sha256: d7cf6dcbffa9e3f5dd9a297b82d528d943ea0f58ee4b9098f5c7ada13b6c6487
+        url: https://files.pythonhosted.org/packages/45/65/e72f3c1bc078ce8dfe6c8f70de2e564d49be7dcd92d96329c949c41d61d0/raydriver-1.3.2-cp311-abi3-manylinux_2_34_x86_64.whl
+        sha256: f322ea29b7b966dba48d687312fd09c495ca19f609b7bd2c0e7ec6b24f773eb1
       - type: file
-        url: https://files.pythonhosted.org/packages/be/b6/75485739532cba174458aa4360bbad48e52ba179001db8e2eecd16e0a144/raydriver-1.0.0-cp311-abi3-manylinux_2_34_aarch64.whl
-        sha256: 716f5379d5b9cd955d5f2df88f5a990a375a9ed4c42aa0a6ec62df79b95356bd
+        url: https://files.pythonhosted.org/packages/8f/e6/8223a8016f0411eb09d87d7d21d97f7c01126196a39c791da9dda37525ab/raydriver-1.3.2-cp311-abi3-manylinux_2_34_aarch64.whl
+        sha256: 06e329e0bdd64d0fe51a01698645e0001ff006037f08a723b01b524901c0e63d
 
 
   - name: python3-pyclipper
