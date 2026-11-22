@@ -58,14 +58,14 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "numpy==2.5.4" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "numpy==2.5.5" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/da/24/3bd070f3269dc609d8f26b2643f62ef91bb415841c0b294805aaf7fe06da/numpy-2.5.4-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
-        sha256: 6ffa07666f8da0eef81d149934a626d0d95fbd6838432a33e66245423a9062c0
+        url: https://files.pythonhosted.org/packages/40/d6/68dd5a83914bbcaf32b3165993f7955979916708cb0156d1e28231e18803/numpy-2.5.5-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+        sha256: 824025655df929268bfe6b47ed91a00d14209a6f760847cf150be446829e1ce4
       - type: file
-        url: https://files.pythonhosted.org/packages/db/b6/135bb0953b61dc21c6cafa14b424ae666944e4899cf140e00c2b322a1a45/numpy-2.5.4-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl
-        sha256: 1c2e71b04c6cad90026e544501bbe0ab9290fa8a4d845e7e8c0d124fb429c988
+        url: https://files.pythonhosted.org/packages/57/06/de83b859944409bb9058bc6110581a3d7fc1f54d6df1222744911d7f6b19/numpy-2.5.5-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl
+        sha256: ae2b8285d0b4eed24739c3ca9ec0fa424a0247489c01e1d5fe2815a599e11d33
   - name: python3-opencv_python
     buildsystem: simple
     build-commands:
@@ -118,11 +118,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "pypdf==7.0.0" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "pypdf==7.1.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/8a/21/e83122a25e334c718a4da67004fa94acd7215fe9f8e63a9d7c7f979eb52b/pypdf-7.0.0-py3-none-any.whl
-        sha256: 112a2c7cbabefd8dfe498f7a13977e575e762d58cdb0d832acb8886922602c6f
+        url: https://files.pythonhosted.org/packages/ed/4c/d19f91b743c8579b67e3d8b001e095745dec5bb13a9b4b9eadc235a85d9e/pypdf-7.1.0-py3-none-any.whl
+        sha256: 47cca6b24bdcf4c4d65b5f7b8b972535c61710a061261e737688777cfd9a7bfb
   - name: python3-pymupdf
     buildsystem: simple
     build-commands:
@@ -172,11 +172,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "threadpoolctl==3.7.0" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "threadpoolctl==3.8.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/43/3f/f88a53f60a472b46f4023f56d204dd7de33d34c5d2acbfa0d70a674e639e/threadpoolctl-3.7.0-py3-none-any.whl
-        sha256: cd8b60b5641b45c67bbf73c64c843235fc2d8a480c87389f52f5dbee893b86be
+        url: https://files.pythonhosted.org/packages/54/1b/831f2de4840a25db1dd7b1afea433ccafe6bb10aca07e13264f2079462d0/threadpoolctl-3.8.0-py3-none-any.whl
+        sha256: f1b49c82704d50f13ffae019c727b0fa4f6791a58f48f06a09c45face1be66da
   - name: python3-scipy
     buildsystem: simple
     build-commands:
@@ -193,11 +193,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "semver==3.1.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "semver==3.1.2" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/57/1d/793b054cbd0a2e0b4694dacc22bad066d6635ce85dd6cdd1f98d95169e9b/semver-3.1.1-py3-none-any.whl
-        sha256: c00cf7dac88a352bc6a4a997d6ac0bf95ba835c589bc0c54f7b76f9e2a45123a
+        url: https://files.pythonhosted.org/packages/ab/60/27e29790ff15ea0a485b8dc200d514328294f956e4abc3d43d88c0b5338d/semver-3.1.2-py3-none-any.whl
+        sha256: 45d107c3fa880910441dfab9d555046cba2829a25feeadfe4a1566439635c510
   - name: python3-svgelements
     buildsystem: simple
     build-commands:
@@ -254,11 +254,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "trimesh==5.2.0" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "trimesh==5.2.1" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/51/14/78624d9c89bab76c2a2e1e839c7641fa686828c2c1c8fb64aedf3b371a5d/trimesh-5.2.0-py3-none-any.whl
-        sha256: 04db2c7ec62afdd7763fb04c82bb5f257ddd984993a19ee83697f475fc58fd29
+        url: https://files.pythonhosted.org/packages/e6/97/a6efa2926335bab3f85cf990a5b5f48abd989719b4015df0e3209675adf7/trimesh-5.2.1-py3-none-any.whl
+        sha256: ba4b5dbdf030bbffbb6337d9c67595435a8d1f224f23eb6500e9662f42a3c5df
   - name: python3-zeroconf
     buildsystem: simple
     build-commands:
